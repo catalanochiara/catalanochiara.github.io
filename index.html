@@ -153,9 +153,61 @@
   .paperlist.small .badge { font-size: 11px; }
   @media (max-width: 800px) { .paperlist.small { grid-template-columns: 1fr; } }
   em, i, .books .book, .pubs .title { font-family: var(--italic); font-style: italic; }
+  /* --- barra in alto e pop-up --- */
+  .topbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 24px;
+    padding: 12px 32px; background: rgba(247,251,251,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line); font-family: var(--sans); }
+  .topbar .brand { font-family: var(--serif); font-weight: 600; font-size: 17px; color: var(--accent); white-space: nowrap; border: 0; }
+  .topnav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; border-top: 0; padding-top: 0; text-transform: none; letter-spacing: 0; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav a { white-space: nowrap; font-size: 14px; color: var(--accent); padding: 6px 12px; border-radius: 999px; border: 0; }
+  .topnav a:hover, .topnav a.active { background: var(--green); color: var(--accent); }
+  .wrap { padding-top: 48px; }
+  aside { top: 96px; }
+  .explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+  .explore-grid a { display: flex; justify-content: space-between; align-items: center; font-family: var(--sans); font-size: 15px;
+    color: var(--accent); background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal2);
+    border-radius: 8px; padding: 14px 16px; transition: background .2s, transform .2s; }
+  .explore-grid a:hover { background: var(--green); transform: translateY(-2px); border-bottom-color: var(--line); }
+  .explore-grid a span { color: var(--green-dark); }
+  .js .modal-only { display: none; }
+  .js .explore { display: block; }
+  .explore { display: none; }
+  dialog#popup { width: min(780px, 92vw); max-height: 86vh; padding: 0; border: 0; border-radius: 14px;
+    background: var(--paper); color: var(--ink); box-shadow: 0 24px 60px rgba(31,78,95,.3); overflow: hidden; }
+  dialog#popup[open] { animation: pop .22s ease; }
+  dialog#popup::backdrop { background: rgba(31,78,95,.35); backdrop-filter: blur(3px); }
+  @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+  .popup-body { max-height: 86vh; overflow-y: auto; padding: 40px 44px 28px; }
+  .popup-body section { margin-bottom: 40px; }
+  .popup-close { position: absolute; top: 12px; right: 14px; z-index: 2; width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--card); color: var(--accent); font-size: 22px; line-height: 1; cursor: pointer; }
+  .popup-close:hover { background: var(--green); }
+  .popup-close:focus:not(:focus-visible) { outline: none; }
+  body.noscroll { overflow: hidden; }
+  @media (max-width: 800px) {
+    .topbar { padding: 10px 16px; gap: 12px; }
+    .topbar .brand { display: none; }
+    .topnav { margin-left: 0; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 24px; }
+    .wrap { padding-top: 28px; }
+    .popup-body { padding: 48px 22px 20px; }
+    dialog#popup { width: 100vw; max-width: 100vw; max-height: 92vh; margin-bottom: 0; border-radius: 14px 14px 0 0; }
+  }
 </style>
 </head>
 <body>
+<header class="topbar" id="top">
+  <a class="brand" href="#top">Chiara Catalano</a>
+  <nav class="topnav">
+    <a href="#research" data-open="research">Research</a>
+    <a href="#education" data-open="education">Education</a>
+    <a href="#clinical" data-open="clinical">Clinical &amp; teaching</a>
+    <a href="#skills" data-open="skills">Skills</a>
+    <a href="#papers" data-open="papers">Papers</a>
+    <a href="#beyond" data-open="beyond">Beyond research</a>
+    <a href="#contact" data-open="contact">Contact</a>
+  </nav>
+</header>
 <div class="wrap">
 
   <aside>
@@ -168,27 +220,12 @@
       <li><span class="lbl">Psychology practice</span><a href="mailto:chiara.catalano.slop@gmail.com">✉ chiara.catalano.slop@gmail.com</a></li>
       <li><a class="li-btn" href="https://www.linkedin.com/in/chiaracatalanopsi/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
     </ul>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#interests">Research interests</a>
-      <a href="#research">Research experience</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#education">Education</a>
-      <a href="#schools">Summer schools</a>
-      <a href="#clinical">Clinical &amp; teaching</a>
-      <a href="#training">Courses &amp; training</a>
-      <a href="#memberships">Memberships</a>
-      <a href="#skills">Skills</a>
-      <a href="#papers">Recommended papers</a>
-      <a href="#beyond">Beyond research</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </aside>
 
   <main>
     <section id="about">
       <h2>About</h2>
-      <p class="lead">I am a licensed psychologist with a research background in psycholinguistics and the neural bases of language, with a particular interest in language processing across the lifespan and in atypical populations.</p>
+      <p>I am a licensed psychologist with a research background in psycholinguistics and the neural bases of language, with a particular interest in language processing across the lifespan and in atypical populations.</p>
       <p>I am currently a Graduate Research Fellow at IUSS Pavia, working on a project on the neurophysiology of verbal humor in early childhood. I enjoy multidisciplinary research environments and try to combine methodological rigor with genuine curiosity for how language shapes – and is shaped by – the developing mind.</p>
     </section>
 
@@ -210,7 +247,7 @@
       </ul>
     </section>
 
-    <section id="research">
+    <section id="research" data-group="research">
       <h2>Research experience</h2>
       <div class="entry">
         <div class="when">Sep 2026 – present</div>
@@ -229,14 +266,14 @@
       </div>
     </section>
 
-    <section id="presentations">
+    <section id="presentations" data-group="research">
       <h2>Presentations</h2>
       <ol class="pubs" reversed>
         <li>Bischetti, L., <strong>Catalano, C.</strong>, Linciano, C., &amp; Bambini, V. (2026). <span class="title">Laughing at nonsense: a large-scale study on Italian Brainrot appreciation in children and adults</span>. <span class="venue">Poster presented at the 6th Experimental Pragmatics in Italy Conference (XPRAG.it 2026), Genoa, Italy, September 2026.</span> <a class="badge" href="https://xpragit2026.weebly.com/" target="_blank" rel="noopener">Conference</a></li>
       </ol>
     </section>
 
-    <section id="education">
+    <section id="education" data-group="education">
       <h2>Education</h2>
       <div class="entry">
         <div class="when">Jan 2026 – present</div>
@@ -263,7 +300,7 @@
       </div>
     </section>
 
-    <section id="schools">
+    <section id="schools" data-group="education">
       <h2>Summer &amp; winter schools</h2>
       <div class="entry">
         <div class="when">Nov 2026</div>
@@ -282,7 +319,7 @@
       </div>
     </section>
 
-    <section id="clinical">
+    <section id="clinical" data-group="clinical">
       <h2>Clinical &amp; teaching experience</h2>
       <div class="entry">
         <div class="when">2026 – present</div>
@@ -301,7 +338,7 @@
       </div>
     </section>
 
-    <section id="training">
+    <section id="training" data-group="education">
       <h2>Selected courses &amp; training</h2>
       <div class="entry"><div class="when">2024 – 2026</div><div><strong>Advanced Courses in Forensic Psychology</strong>, <a href="https://www.slop.it/" target="_blank" rel="noopener">Scuola Lombarda di Psicoterapia (SLOP)</a>
         <p>Criminal Psychology and Criminology (2024), Criminal Law (2025), Minors and Family (2026).</p></div></div>
@@ -311,7 +348,7 @@
       <div class="entry"><div class="when">2024</div><div><strong>“S.O.S. – Strategies, Operations, Support”</strong>, Liberamente Anti-Violence Center</div></div>
     </section>
 
-    <section id="memberships">
+    <section id="memberships" data-group="education">
       <h2>Professional memberships</h2>
       <div class="entry">
         <div class="when">Jan 2026 – present</div>
@@ -320,7 +357,7 @@
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-group="skills">
       <h2>Skills</h2>
       <div class="skills">
         <div>
@@ -344,14 +381,14 @@
       </div>
     </section>
 
-    <section id="papers">
+    <section id="papers" data-group="papers">
       <h2>Recommended papers</h2>
       <!-- I paper si aggiungono nel file papers.js: qui compaiono automaticamente i primi 3 -->
       <div id="paper-preview"></div>
       <a class="morelink" href="papers.html">See all recommended papers →</a>
     </section>
 
-    <section id="beyond">
+    <section id="beyond" data-group="beyond">
       <h2>Beyond research</h2>
       <ul class="tags">
         <li>📚 Reading</li>
@@ -383,7 +420,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-group="contact">
       <h2>Contact</h2>
       <p>For research enquiries: <a href="mailto:chiara.catalano1@iusspavia.it">chiara.catalano1@iusspavia.it</a><br>
       For professional psychology services: <a href="mailto:chiara.catalano.slop@gmail.com">chiara.catalano.slop@gmail.com</a></p>
@@ -417,6 +454,10 @@
     next();
   });
 </script>
+<dialog id="popup" aria-label="Section">
+  <button class="popup-close" type="button" aria-label="Close" data-close autofocus>×</button>
+  <div class="popup-body"></div>
+</dialog>
 <script src="papers.js?v=4"></script>
 <script>
   (function () {
@@ -470,6 +511,42 @@
     var others = data.filter(function (p) { return p !== featured; }).slice(0, 2);
     box.innerHTML = '<ul class="paperlist">' + item(featured, 'featured') + '</ul>' +
       (others.length ? '<ul class="paperlist small">' + others.map(function (p) { return item(p, ''); }).join('') + '</ul>' : '');
+  })();
+</script>
+<script>
+  (function () {
+    var dlg = document.getElementById('popup');
+    var body = dlg.querySelector('.popup-body');
+    function close() {
+      body.innerHTML = '';
+      if (dlg.open) dlg.close();
+      document.body.classList.remove('noscroll');
+      document.querySelectorAll('.topnav a').forEach(function (a) { a.classList.remove('active'); });
+    }
+    function open(group) {
+      var secs = document.querySelectorAll('main section[data-group="' + group + '"]');
+      if (!secs.length) return;
+      body.innerHTML = '';
+      secs.forEach(function (s) {
+        var c = s.cloneNode(true);           // copia: la pagina resta intera e scorrevole
+        c.removeAttribute('id');
+        c.querySelectorAll('[id]').forEach(function (el) { el.removeAttribute('id'); });
+        body.appendChild(c);
+      });
+      if (!dlg.open) { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+      dlg.querySelector('.popup-close').focus({ preventScroll: true });
+      body.scrollTop = 0;
+      requestAnimationFrame(function () { body.scrollTop = 0; });
+      document.body.classList.add('noscroll');
+      document.querySelectorAll('.topnav a').forEach(function (a) { a.classList.toggle('active', a.dataset.open === group); });
+    }
+    document.addEventListener('click', function (e) {
+      var o = e.target.closest('[data-open]');
+      if (o) { e.preventDefault(); open(o.dataset.open); return; }
+      if (e.target.closest('[data-close]')) { e.preventDefault(); close(); }
+    });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
   })();
 </script>
 </body>
