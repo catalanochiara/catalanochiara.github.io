@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="show-en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy — Chiara Catalano</title>
+<meta name="description" content="Privacy policy of Chiara Catalano's website.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2231%22%20fill%3D%22%23faf6ee%22%20stroke%3D%22%236e1a28%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2228%22%20fill%3D%22%236e1a28%22%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=cormorant-garamond:400i,500i,600i&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2224;
+    --muted: #6e6262;
+    --line: #eadfcc;
+    --paper: #faf6ee;   /* panna */
+    --card: #fffdf8;
+    --green: #f3e6e2;   /* rosa cipria chiaro (sfondi evidenziati) */
+    --green-dark: #9b2c3c; /* bordeaux medio: titoli, link, date */
+    --teal2: #b9606b;   /* bordeaux chiaro: bordi */
+    --accent: #6e1a28;  /* bordeaux scuro */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --italic: "Cormorant Garamond", Garamond, Georgia, serif;
+    --sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  a { color: var(--green-dark); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 64px 32px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 64px;
+  }
+
+  /* Colonna laterale */
+  aside { position: sticky; top: 48px; align-self: start; }
+  .avatar {
+    width: 140px; height: 140px; border-radius: 50%;
+    background: var(--green); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px; letter-spacing: 1px;
+    border: 3px solid var(--card);
+    box-shadow: 0 0 0 1px var(--green-dark);
+    margin-bottom: 24px;
+  }
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; font-weight: 600; }
+  .role { color: var(--muted); font-size: 16px; margin: 0 0 20px; }
+  .links { list-style: none; padding: 0; margin: 0 0 28px; font-family: var(--sans); font-size: 14px; }
+  .links li { margin: 6px 0; }
+  nav { font-family: var(--sans); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; border-top: 2px solid var(--green); padding-top: 18px; }
+  nav a { display: block; color: var(--muted); padding: 4px 0; }
+  nav a:hover { color: var(--accent); border-bottom-color: transparent; }
+
+  /* Contenuto */
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 14px; font-family: var(--sans); font-weight: 600;
+    text-transform: uppercase; letter-spacing: .12em; color: var(--green-dark);
+    margin: 0 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--green);
+  }
+  .lead { font-size: 21px; line-height: 1.55; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; font-family: var(--sans); font-size: 14px; }
+  .tags li { border: 1px solid var(--teal2); background: var(--green); color: var(--accent); padding: 4px 12px; border-radius: 999px; }
+
+  .entry { display: grid; grid-template-columns: 110px 1fr; gap: 20px; margin-bottom: 18px; }
+  .when { font-family: var(--sans); font-size: 14px; color: var(--green-dark); font-weight: 600; padding-top: 3px; }
+  .entry strong { font-weight: 600; }
+  .entry p { margin: 2px 0 0; color: var(--muted); font-size: 16px; }
+
+  .pubs { padding-left: 1.2em; margin: 0; }
+  .pubs li { margin-bottom: 14px; }
+  .pubs .title { font-style: italic; }
+  .pubs .venue { color: var(--muted); }
+  .badge { font-family: var(--sans); font-size: 12px; background: var(--card); border: 1px solid var(--green-dark); padding: 1px 8px; border-radius: 4px; margin-left: 6px; white-space: nowrap; }
+
+  footer { font-family: var(--sans); font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; }
+
+  @media (max-width: 800px) {
+    .wrap { grid-template-columns: 1fr; gap: 32px; padding: 40px 22px; }
+    aside { position: static; text-align: center; }
+    .avatar { margin: 0 auto 20px; }
+    .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 18px; }
+    nav { display: none; }
+    .entry { grid-template-columns: 1fr; gap: 0; }
+  }
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .skills h3 { font-size: 17px; margin: 0 0 8px; color: var(--accent); font-weight: 600; }
+  .skills ul { margin: 0; padding-left: 1.1em; font-size: 16px; }
+  .skills li { margin-bottom: 4px; }
+  .when { line-height: 1.4; }
+  @media (max-width: 800px) { .skills { grid-template-columns: 1fr; } }
+  .langs { list-style: none; padding: 0 !important; }
+  .langs li { display: grid; grid-template-columns: 90px auto 1fr; align-items: center; gap: 12px; margin-bottom: 8px !important; }
+  .dots { display: inline-flex; gap: 5px; }
+  .dots i { width: 11px; height: 11px; border-radius: 50%; background: var(--green); border: 1px solid var(--teal2); }
+  .dots i.on { background: var(--green-dark); border-color: var(--green-dark); }
+  .lvl { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+  .scale { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+  .reading { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .reading h3 { font-size: 17px; margin: 0 0 10px; color: var(--accent); font-weight: 600; }
+  .books { list-style: none; padding: 0; margin: 0; }
+  .books li { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal2); border-radius: 6px; padding: 10px 14px; margin-bottom: 10px; position: relative; }
+  .books li.current { border-left-color: var(--accent); background: var(--green); }
+  .books .book { display: block; font-style: italic; line-height: 1.35; }
+  .books .author { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); }
+  .cover { position: relative; flex: 0 0 44px; width: 44px; height: 66px; cursor: zoom-in; outline: none; }
+  .cover img { position: absolute; left: 0; top: 0; width: 44px; height: 66px; object-fit: cover; border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(110,26,40,.25); transform-origin: left center;
+    transition: transform .25s ease, box-shadow .25s ease; z-index: 1; }
+  .cover:hover img, .cover:focus img { transform: scale(3.6); box-shadow: 0 10px 30px rgba(110,26,40,.35); z-index: 20; }
+  .cover:hover, .cover:focus { z-index: 20; }
+  .books li:has(.cover:hover), .books li:has(.cover:focus) { z-index: 20; }
+  .cover.nocover { cursor: default; background: var(--green); border: 1px solid var(--teal2); border-radius: 3px;
+    display: flex; align-items: center; justify-content: center; }
+  .cover.nocover::after { content: "📖"; font-size: 20px; }
+  .cover.nocover img { display: none; }
+  @media (max-width: 800px) { .reading { grid-template-columns: 1fr; } }
+  .paperlist { list-style: none; padding: 0; margin: 0; }
+  .paper { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal2); border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+  .paper.current { border-left-color: var(--accent); background: var(--green); }
+  .ptag { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 4px; }
+  .paper:not(.current) .ptag { color: var(--green-dark); }
+  .ptitle { display: block; font-weight: 600; line-height: 1.4; }
+  .pmeta { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 2px 0 8px; }
+  .paper .badge { margin-left: 0; }
+  .morelink { display: inline-block; font-family: var(--sans); font-size: 14px; font-weight: 600; margin-top: 4px; }
+  .subhead { height: 22px; }
+  .reading { grid-template-columns: 1fr !important; max-width: 460px; }
+  em, i, .books .book, .pubs .title { font-family: var(--italic); font-style: italic; font-size: 1.1em; line-height: 1; }
+  /* --- animazioni al passaggio del mouse --- */
+  h2 > span { display: inline-block; transform-origin: left center; transition: transform .25s ease, color .25s ease; }
+  h2:hover > span { transform: scale(1.18); color: var(--accent); }
+  .paper, .books li { transition: transform .25s ease, box-shadow .25s ease; }
+  .paper:hover, .books li:hover { transform: translateY(-3px) scale(1.015); box-shadow: 0 10px 24px rgba(110,26,40,.14); }
+  @media (prefers-reduced-motion: reduce) { h2 > span, .paper, .books li { transition: none; } }
+  html.show-en .l-it, html.show-it .l-en { display: none !important; }
+  .langswitch { display: inline-flex; border: 1px solid var(--green-dark); border-radius: 999px; overflow: hidden; font-family: var(--sans); float: right; }
+  .langswitch button { border: 0; background: var(--card); color: var(--green-dark); font: 600 12px var(--sans); letter-spacing: .08em; padding: 5px 12px; cursor: pointer; }
+  .langswitch button[aria-pressed="true"] { background: var(--accent); color: var(--card); }
+  /* --- accessibilità colori (daltonismo / ipovisione) --- */
+  main p a, .entry a, .pubs a:not(.badge), .role a, #contact p a, .popup-body p a {
+    text-decoration: underline; text-decoration-color: var(--teal2); text-decoration-thickness: 1px; text-underline-offset: 3px; border-bottom: 0; }
+  main p a:hover, .entry a:hover, .role a:hover, #contact p a:hover { text-decoration-thickness: 2px; }
+  .contactform input, .contactform textarea { border-color: #9c8a7d; }
+  .contactform .invalid { border: 2px solid #b3261e; }
+  .formstatus.err::before { content: "⚠ "; } .formstatus.ok::before { content: "✓ "; }
+</style>
+<style>
+  .single { max-width: 760px; margin: 0 auto; padding: 64px 32px; }
+  .back { font-family: var(--sans); font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 28px; }
+  .single h1 { margin-bottom: 4px; }
+  .intro { color: var(--muted); margin: 0 0 36px; }
+  @media (max-width: 800px) { .single { padding: 40px 22px; } }
+</style>
+</head>
+<body>
+<div class="single">
+  <div class="langswitch top" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="it">IT</button></div>
+  <a class="back" href="index.html"><span class="l-en">← Back to Chiara Catalano</span><span class="l-it">← Torna a Chiara Catalano</span></a>
+  <h1><span class="l-en">Privacy policy</span><span class="l-it">Informativa privacy</span></h1>
+  <p class="intro"><span class="l-en">Pursuant to Articles 13–14 of Regulation (EU) 2016/679 (GDPR). Last updated: November 2026.</span><span class="l-it">Ai sensi degli artt. 13–14 del Regolamento (UE) 2016/679 (GDPR). Ultimo aggiornamento: novembre 2026.</span></p>
+  <section>
+    <h2><span><span class="l-en">1. Data controller</span><span class="l-it">1. Titolare del trattamento</span></span></h2>
+    <p><span class="l-en">Chiara Catalano, psychologist registered with the Ordine degli Psicologi della Lombardia. Contact: <a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a> – <a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a>.</span><span class="l-it">Chiara Catalano, psicologa iscritta all’Ordine degli Psicologi della Lombardia. Contatti: <a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a> – <a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a>.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">2. Data processed</span><span class="l-it">2. Dati trattati</span></span></h2>
+    <p><span class="l-en"><strong>Contact form:</strong> first name, last name, email address and the content of your message, which you provide voluntarily.<br><strong>Browsing data:</strong> the hosting provider may automatically record technical data (e.g. IP address, browser type, date and time of access) for security and correct operation of the service.<br>The site does not use profiling or advertising cookies, analytics or tracking tools. Your language preference (EN/IT) is stored only in your browser (local storage) for purely technical purposes.</span><span class="l-it"><strong>Modulo contatti:</strong> nome, cognome, indirizzo email e contenuto del messaggio, forniti volontariamente da te.<br><strong>Dati di navigazione:</strong> il fornitore di hosting può registrare automaticamente dati tecnici (ad es. indirizzo IP, tipo di browser, data e ora di accesso) per la sicurezza e il corretto funzionamento del servizio.<br>Il sito non utilizza cookie di profilazione o pubblicitari, né strumenti di statistica o tracciamento. La preferenza di lingua (EN/IT) è salvata solo nel tuo browser (local storage), per finalità esclusivamente tecniche.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">3. Purposes and legal basis</span><span class="l-it">3. Finalità e base giuridica</span></span></h2>
+    <p><span class="l-en">The site does not allow you to book appointments or request professional services. Your data are processed only to read and reply to your message. The legal basis is the response to a request made by you (Art. 6(1)(b) GDPR) and, for general enquiries, the controller’s legitimate interest in replying (Art. 6(1)(f) GDPR). Your data are not used for marketing, profiling or automated decision-making.</span><span class="l-it">Il sito non consente di prenotare appuntamenti né di richiedere prestazioni professionali. I dati sono trattati esclusivamente per leggere il tuo messaggio e risponderti. La base giuridica è il riscontro a una richiesta da te avanzata (art. 6, par. 1, lett. b GDPR) e, per le richieste di carattere generale, il legittimo interesse della titolare a rispondere (art. 6, par. 1, lett. f GDPR). I dati non sono utilizzati per finalità di marketing, profilazione o decisioni automatizzate.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">4. Provision of data</span><span class="l-it">4. Natura del conferimento</span></span></h2>
+    <p><span class="l-en">Providing your data is optional, but without them it is not possible to reply to your message.</span><span class="l-it">Il conferimento dei dati è facoltativo, ma senza di essi non è possibile rispondere al tuo messaggio.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">5. Recipients</span><span class="l-it">5. Destinatari</span></span></h2>
+    <p><span class="l-en">Your data are not disseminated. They may be processed, on behalf of the controller and only to the extent necessary, by the following providers acting as data processors: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree, Inc.</a> (USA), which receives the form and forwards it by email; the providers of the controller’s email inboxes; <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub, Inc.</a> (USA), which hosts the site; <a href="https://bunny.net/privacy/" target="_blank" rel="noopener">BunnyWay d.o.o.</a> (EU), which provides the fonts.</span><span class="l-it">I dati non sono diffusi. Possono essere trattati, per conto della titolare e solo nella misura necessaria, dai seguenti fornitori in qualità di responsabili del trattamento: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree, Inc.</a> (USA), che riceve il modulo e lo inoltra via email; i fornitori delle caselle email della titolare; <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub, Inc.</a> (USA), che ospita il sito; <a href="https://bunny.net/privacy/" target="_blank" rel="noopener">BunnyWay d.o.o.</a> (UE), che fornisce i caratteri tipografici.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">6. Transfers outside the EU</span><span class="l-it">6. Trasferimento dei dati fuori dall’UE</span></span></h2>
+    <p><span class="l-en">Some providers are based in the United States. Any transfer takes place on the basis of the safeguards provided by Articles 44 et seq. GDPR, such as the European Commission’s Standard Contractual Clauses or the EU-U.S. Data Privacy Framework, as indicated by each provider in its own privacy policy.</span><span class="l-it">Alcuni fornitori hanno sede negli Stati Uniti. L’eventuale trasferimento avviene sulla base delle garanzie previste dagli artt. 44 e ss. GDPR, come le Clausole contrattuali standard della Commissione europea o il Data Privacy Framework UE-USA, secondo quanto indicato da ciascun fornitore nella propria informativa.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">7. Health and sensitive data</span><span class="l-it">7. Dati sanitari e particolari</span></span></h2>
+    <p><span class="l-en">Please do not send health information or other special categories of data (Art. 9 GDPR) through the form. Requests for professional psychology services are handled only by email, outside this site: if a professional relationship begins, you will receive a specific privacy notice.</span><span class="l-it">Ti chiedo di non inviare tramite il modulo informazioni sulla salute o altre categorie particolari di dati (art. 9 GDPR). Le richieste relative all’attività professionale da psicologa sono gestite solo via email, al di fuori di questo sito: se nascerà un rapporto professionale, riceverai un’informativa specifica.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">8. Retention</span><span class="l-it">8. Conservazione</span></span></h2>
+    <p><span class="l-en">Messages are kept for the time needed to handle your request and in any case no longer than 12 months from the last contact, unless longer retention is required by law.</span><span class="l-it">I messaggi sono conservati per il tempo necessario a gestire la tua richiesta e comunque non oltre 12 mesi dall’ultimo contatto, salvo obblighi di legge che ne richiedano una conservazione più lunga.</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">9. Your rights</span><span class="l-it">9. I tuoi diritti</span></span></h2>
+    <p><span class="l-en">At any time you may exercise the rights set out in Articles 15–22 GDPR: access, rectification, erasure, restriction of processing, data portability and objection, by writing to the addresses above. You also have the right to lodge a complaint with the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a> (Art. 77 GDPR).</span><span class="l-it">In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR: accesso, rettifica, cancellazione, limitazione del trattamento, portabilità e opposizione, scrivendo agli indirizzi indicati sopra. Hai inoltre il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a> (art. 77 GDPR).</span></p>
+  </section>
+  <section>
+    <h2><span><span class="l-en">10. Changes</span><span class="l-it">10. Modifiche</span></span></h2>
+    <p><span class="l-en">This notice may be updated. The date of the latest version is shown at the top of this page.</span><span class="l-it">La presente informativa può essere aggiornata. La data dell’ultima versione è indicata in cima alla pagina.</span></p>
+  </section>
+  <footer>© 2026 Chiara Catalano</footer>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var titles = { en: "Privacy — Chiara Catalano", it: "Privacy — Chiara Catalano" };
+    function setLang(l) {
+      root.lang = l;
+      root.classList.remove('show-en', 'show-it');
+      root.classList.add('show-' + l);
+      document.title = titles[l];
+      document.querySelectorAll('.langswitch button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var browser = (navigator.language || 'en').slice(0, 2) === 'it' ? 'it' : 'en';
+    setLang(saved === 'it' || saved === 'en' ? saved : browser);
+    document.querySelectorAll('.langswitch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
+  })();
+</script>
+<script>
+  // email nascoste ai programmi automatici: vengono ricomposte qui
+  document.querySelectorAll('a.em').forEach(function (a) {
+    var e = a.dataset.u.split('').reverse().join('') + '@' + a.dataset.d.split('').reverse().join('');
+    a.href = 'mailto:' + e;
+    a.textContent = (a.dataset.p || '') + e;
+  });
+</script>
+</body>
+</html>

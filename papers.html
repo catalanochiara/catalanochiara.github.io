@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="show-en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recommended papers — Chiara Catalano</title>
 <meta name="description" content="Papers read and recommended by Chiara Catalano.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2231%22%20fill%3D%22%23faf6ee%22%20stroke%3D%22%236e1a28%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2228%22%20fill%3D%22%236e1a28%22%3ECC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=cormorant-garamond:400i,500i,600i&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1c3540;
-    --muted: #4f6870;
-    --line: #d6f0ee;
-    --paper: #f7fbfb;   /* sfondo */
-    --card: #ffffff;
-    --green: #d6f0ee;   /* acqua chiaro */
-    --green-dark: #2a9d8f; /* teal */
-    --teal2: #3aa597;
-    --accent: #1f4e5f;  /* petrolio */
+    --ink: #2b2224;
+    --muted: #6e6262;
+    --line: #eadfcc;
+    --paper: #faf6ee;   /* panna */
+    --card: #fffdf8;
+    --green: #f3e6e2;   /* rosa cipria chiaro (sfondi evidenziati) */
+    --green-dark: #9b2c3c; /* bordeaux medio: titoli, link, date */
+    --teal2: #b9606b;   /* bordeaux chiaro: bordi */
+    --accent: #6e1a28;  /* bordeaux scuro */
     --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     --italic: "Cormorant Garamond", Garamond, Georgia, serif;
     --sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -118,9 +119,9 @@
   .books .author { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); }
   .cover { position: relative; flex: 0 0 44px; width: 44px; height: 66px; cursor: zoom-in; outline: none; }
   .cover img { position: absolute; left: 0; top: 0; width: 44px; height: 66px; object-fit: cover; border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(31,78,95,.25); transform-origin: left center;
+    box-shadow: 0 1px 3px rgba(110,26,40,.25); transform-origin: left center;
     transition: transform .25s ease, box-shadow .25s ease; z-index: 1; }
-  .cover:hover img, .cover:focus img { transform: scale(3.6); box-shadow: 0 10px 30px rgba(31,78,95,.35); z-index: 20; }
+  .cover:hover img, .cover:focus img { transform: scale(3.6); box-shadow: 0 10px 30px rgba(110,26,40,.35); z-index: 20; }
   .cover:hover, .cover:focus { z-index: 20; }
   .books li:has(.cover:hover), .books li:has(.cover:focus) { z-index: 20; }
   .cover.nocover { cursor: default; background: var(--green); border: 1px solid var(--teal2); border-radius: 3px;
@@ -140,6 +141,23 @@
   .subhead { height: 22px; }
   .reading { grid-template-columns: 1fr !important; max-width: 460px; }
   em, i, .books .book, .pubs .title { font-family: var(--italic); font-style: italic; font-size: 1.1em; line-height: 1; }
+  /* --- animazioni al passaggio del mouse --- */
+  h2 > span { display: inline-block; transform-origin: left center; transition: transform .25s ease, color .25s ease; }
+  h2:hover > span { transform: scale(1.18); color: var(--accent); }
+  .paper, .books li { transition: transform .25s ease, box-shadow .25s ease; }
+  .paper:hover, .books li:hover { transform: translateY(-3px) scale(1.015); box-shadow: 0 10px 24px rgba(110,26,40,.14); }
+  @media (prefers-reduced-motion: reduce) { h2 > span, .paper, .books li { transition: none; } }
+  html.show-en .l-it, html.show-it .l-en { display: none !important; }
+  .langswitch { display: inline-flex; border: 1px solid var(--green-dark); border-radius: 999px; overflow: hidden; font-family: var(--sans); float: right; }
+  .langswitch button { border: 0; background: var(--card); color: var(--green-dark); font: 600 12px var(--sans); letter-spacing: .08em; padding: 5px 12px; cursor: pointer; }
+  .langswitch button[aria-pressed="true"] { background: var(--accent); color: var(--card); }
+  /* --- accessibilità colori (daltonismo / ipovisione) --- */
+  main p a, .entry a, .pubs a:not(.badge), .role a, #contact p a, .popup-body p a {
+    text-decoration: underline; text-decoration-color: var(--teal2); text-decoration-thickness: 1px; text-underline-offset: 3px; border-bottom: 0; }
+  main p a:hover, .entry a:hover, .role a:hover, #contact p a:hover { text-decoration-thickness: 2px; }
+  .contactform input, .contactform textarea { border-color: #9c8a7d; }
+  .contactform .invalid { border: 2px solid #b3261e; }
+  .formstatus.err::before { content: "⚠ "; } .formstatus.ok::before { content: "✓ "; }
 </style>
 <style>
   .single { max-width: 760px; margin: 0 auto; padding: 64px 32px; }
@@ -151,9 +169,10 @@
 </head>
 <body>
 <div class="single">
-  <a class="back" href="index.html">← Back to Chiara Catalano</a>
-  <h1>Recommended papers</h1>
-  <p class="intro">Papers I am reading and papers I recommend: anything that sparks my curiosity and enriches the way I think.</p>
+  <div class="langswitch top" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="it">IT</button></div>
+  <a class="back" href="index.html"><span class="l-en">← Back to Chiara Catalano</span><span class="l-it">← Torna a Chiara Catalano</span></a>
+  <h1><span class="l-en">Recommended papers</span><span class="l-it">Paper consigliati</span></h1>
+  <p class="intro"><span class="l-en">Papers I am reading and papers I recommend: anything that sparks my curiosity and enriches the way I think.</span><span class="l-it">Paper che sto leggendo e che consiglio: tutto ciò che stimola la mia curiosità e arricchisce il mio modo di pensare.</span></p>
   <ul class="paperlist" id="paper-all"></ul>
   <footer>© 2026 Chiara Catalano</footer>
 </div>
@@ -199,14 +218,33 @@
     }
     function item(p, extra) {
       return '<li class="paper' + (p.current ? ' current' : '') + (extra ? ' ' + extra : '') + '">' +
-        '<span class="ptag">' + (p.current ? 'Currently reading' : 'Recommended') + '</span>' +
+        '<span class="ptag">' + (p.current ? '<span class="l-en">Currently reading</span><span class="l-it">Sto leggendo</span>' : '<span class="l-en">Recommended</span><span class="l-it">Consigliato</span>') + '</span>' +
         '<span class="ptitle">' + esc(p.title) + '</span>' +
         '<span class="pmeta">' + esc(p.authors) + ' · <em>' + esc(p.journal) + '</em>' +
           (p.details ? ', ' + esc(p.details) : '') + (p.year ? ' (' + esc(p.year) + ')' : '') + '</span>' +
-        (p.link ? '<a class="badge" href="' + esc(p.link) + '" target="_blank" rel="noopener">Read the paper</a>' : '') +
+        (p.link ? '<a class="badge" href="' + esc(p.link) + '" target="_blank" rel="noopener"><span class="l-en">Read the paper</span><span class="l-it">Leggi il paper</span></a>' : '') +
         '</li>';
     }
     box.innerHTML = data.map(function (p) { return item(p, ''); }).join('');
+  })();
+</script>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var titles = { en: "Recommended papers — Chiara Catalano", it: "Paper consigliati — Chiara Catalano" };
+    function setLang(l) {
+      root.lang = l;
+      root.classList.remove('show-en', 'show-it');
+      root.classList.add('show-' + l);
+      document.title = titles[l];
+      document.querySelectorAll('.langswitch button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var browser = (navigator.language || 'en').slice(0, 2) === 'it' ? 'it' : 'en';
+    setLang(saved === 'it' || saved === 'en' ? saved : browser);
+    document.querySelectorAll('.langswitch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
   })();
 </script>
 </body>
