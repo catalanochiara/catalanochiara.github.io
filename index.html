@@ -256,6 +256,12 @@
   .menulist a:hover, .menulist a:focus { background: var(--green); color: var(--accent); outline: none; }
   section[id] { scroll-margin-top: 84px; }
   @media (max-width: 800px) { .topbar .brand { display: inline; font-size: 20px; } .menuwrap { margin-left: auto; } }
+  /* --- foto profilo protetta + ingrandimento --- */
+  .avatar .photo { position: absolute; inset: 0; z-index: 1; border-radius: 50%;
+    background: url("foto.jpg") center 30% / cover no-repeat; pointer-events: none; }
+  .avatar { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+    transition: transform .3s ease, box-shadow .3s ease; cursor: default; }
+  .avatar:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(110,26,40,.18); }
 </style>
 </head>
 <body>
@@ -280,8 +286,8 @@
 <div class="wrap">
 
   <aside>
-    <!-- Foto: carica nel repository un file chiamato foto.jpg. Se manca, compaiono le iniziali CC -->
-    <div class="avatar"><img src="foto.jpg" alt="Chiara Catalano" onerror="this.remove()"><span>CC</span></div>
+    <!-- Foto: carica nel repository un file chiamato foto.jpg. Se manca, compaiono le iniziali CC. La foto è mostrata come sfondo per non poterla salvare col tasto destro. -->
+    <div class="avatar" oncontextmenu="return false"><span class="photo" role="img" aria-label="Chiara Catalano"></span><span>CC</span></div>
     <h1>Chiara Catalano</h1>
     <p class="role"><span class="l-en">Psychologist<br>Graduate Research Fellow<br></span><span class="l-it">Psicologa<br>Assistente di ricerca<br></span><a href="https://www.neplab.it/" target="_blank" rel="noopener"><span class="l-en">Laboratory of Neurolinguistics and Experimental Pragmatics (NEPLab)</span><span class="l-it">Laboratorio di Neurolinguistica e Pragmatica Sperimentale (NEPLab)</span></a><br><span class="l-en">IUSS School for Advanced Studies, Pavia (Italy)</span><span class="l-it">Scuola Universitaria Superiore IUSS, Pavia</span></p>
     <ul class="links">
