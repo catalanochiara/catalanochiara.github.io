@@ -276,6 +276,11 @@
   .dots3 i:nth-child(2) { animation-delay: .2s; } .dots3 i:nth-child(3) { animation-delay: .4s; }
   @keyframes blink { 0%, 80%, 100% { opacity: .15; } 40% { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .dots3 i { animation: none; } }
+  /* --- testo un po' più piccolo da computer --- */
+  @media (min-width: 801px) {
+    body { font-size: 16.5px; }
+    .entry p, .pubs, .books .author { font-size: 15px; }
+  }
 </style>
 </head>
 <body>

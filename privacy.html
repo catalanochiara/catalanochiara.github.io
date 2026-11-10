@@ -158,6 +158,15 @@
   .contactform input, .contactform textarea { border-color: #9c8a7d; }
   .contactform .invalid { border: 2px solid #b3261e; }
   .formstatus.err::before { content: "⚠ "; } .formstatus.ok::before { content: "✓ "; }
+  .privacy-page h3 { font-size: 17px; color: var(--accent); margin: 18px 0 4px; }
+  .privacy-page ul { padding-left: 1.2em; margin: 8px 0 12px; }
+  .privacy-page li { margin-bottom: 6px; }
+  .privacy-page section { margin-bottom: 34px; }
+  /* --- testo un po' più piccolo da computer --- */
+  @media (min-width: 801px) {
+    body { font-size: 16.5px; }
+    .entry p, .pubs, .books .author { font-size: 15px; }
+  }
 </style>
 <style>
   .single { max-width: 760px; margin: 0 auto; padding: 64px 32px; }
@@ -168,51 +177,220 @@
 </style>
 </head>
 <body>
-<div class="single">
+<div class="single privacy-page">
   <div class="langswitch top" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="it">IT</button></div>
   <a class="back" href="index.html"><span class="l-en">← Back to Chiara Catalano</span><span class="l-it">← Torna a Chiara Catalano</span></a>
-  <h1><span class="l-en">Privacy policy</span><span class="l-it">Informativa privacy</span></h1>
-  <p class="intro"><span class="l-en">Pursuant to Articles 13–14 of Regulation (EU) 2016/679 (GDPR). Last updated: November 2026.</span><span class="l-it">Ai sensi degli artt. 13–14 del Regolamento (UE) 2016/679 (GDPR). Ultimo aggiornamento: novembre 2026.</span></p>
+  <h1><span class="l-en">Privacy policy</span><span class="l-it">Informativa sul trattamento dei dati personali</span></h1>
+  <p class="intro"><span class="l-en">Pursuant to Art. 13 of Regulation (EU) 2016/679 (GDPR). Last updated: November 2026.</span><span class="l-it">Ai sensi dell’art. 13 del Regolamento (UE) 2016/679 (GDPR). Ultimo aggiornamento: novembre 2026.</span></p>
+  <p><span class="l-en">This notice describes which data are processed while you browse the site and when you use the contact form, for what purposes and in what ways, as well as the rights you can exercise.</span><span class="l-it">Questa informativa descrive quali dati vengono trattati durante la navigazione sul sito e quando utilizzi il modulo di contatto, per quali finalità e con quali modalità, nonché i diritti che puoi esercitare.</span></p>
+  <div class="l-it">
   <section>
-    <h2><span><span class="l-en">1. Data controller</span><span class="l-it">1. Titolare del trattamento</span></span></h2>
-    <p><span class="l-en">Chiara Catalano. Contact: <a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a> – <a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a>.</span><span class="l-it">Chiara Catalano. Contatti: <a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a> – <a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a>.</span></p>
+    <h2><span>1. Titolare del trattamento</span></h2>
+    <p>La titolare del trattamento dei dati personali è Chiara Catalano.</p>
+    <p>Per qualsiasi richiesta relativa alla protezione dei tuoi dati personali puoi scrivere a:</p>
+    <ul>
+      <li><a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a></li>
+      <li><a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a></li>
+    </ul>
   </section>
   <section>
-    <h2><span><span class="l-en">2. Data processed</span><span class="l-it">2. Dati trattati</span></span></h2>
-    <p><span class="l-en"><strong>Contact form:</strong> first name, last name, email address and the content of your message, which you provide voluntarily.<br><strong>Browsing data:</strong> the hosting provider may automatically record technical data (e.g. IP address, browser type, date and time of access) for security and correct operation of the service.<br>The site does not use profiling or advertising cookies, analytics or tracking tools. Your language preference (EN/IT) is stored only in your browser (local storage) for purely technical purposes.</span><span class="l-it"><strong>Modulo contatti:</strong> nome, cognome, indirizzo email e contenuto del messaggio, forniti volontariamente da te.<br><strong>Dati di navigazione:</strong> il fornitore di hosting può registrare automaticamente dati tecnici (ad es. indirizzo IP, tipo di browser, data e ora di accesso) per la sicurezza e il corretto funzionamento del servizio.<br>Il sito non utilizza cookie di profilazione o pubblicitari, né strumenti di statistica o tracciamento. La preferenza di lingua (EN/IT) è salvata solo nel tuo browser (local storage), per finalità esclusivamente tecniche.</span></p>
+    <h2><span>2. Quali dati vengono trattati</span></h2>
+    <p>Durante l’utilizzo del sito possono essere trattate le seguenti categorie di dati personali:</p>
+    <h3>Dati forniti tramite il modulo di contatto</h3>
+    <p>Quando compili il modulo di contatto, vengono raccolti nome, cognome, indirizzo e-mail e contenuto del messaggio. Queste informazioni sono utilizzate esclusivamente per gestire la tua richiesta e fornirti una risposta.</p>
+    <h3>Dati tecnici di navigazione</h3>
+    <p>Il servizio di hosting può raccogliere automaticamente alcune informazioni tecniche necessarie al funzionamento e alla sicurezza del sito, tra cui indirizzo IP, tipo di browser, data e ora di accesso ed eventuali informazioni relative alle richieste effettuate al server.</p>
+    <p>Tali dati sono gestiti secondo le modalità e i tempi di conservazione previsti dal fornitore del servizio.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">3. Purposes and legal basis</span><span class="l-it">3. Finalità e base giuridica</span></span></h2>
-    <p><span class="l-en">The site does not allow you to book appointments or request professional services. Your data are processed only to read and reply to your message. The legal basis is the response to a request made by you (Art. 6(1)(b) GDPR) and, for general enquiries, the controller’s legitimate interest in replying (Art. 6(1)(f) GDPR). Your data are not used for marketing, profiling or automated decision-making.</span><span class="l-it">Il sito non consente di prenotare appuntamenti né di richiedere prestazioni professionali. I dati sono trattati esclusivamente per leggere il tuo messaggio e risponderti. La base giuridica è il riscontro a una richiesta da te avanzata (art. 6, par. 1, lett. b GDPR) e, per le richieste di carattere generale, il legittimo interesse della titolare a rispondere (art. 6, par. 1, lett. f GDPR). I dati non sono utilizzati per finalità di marketing, profilazione o decisioni automatizzate.</span></p>
+    <h2><span>3. Finalità e basi giuridiche del trattamento</span></h2>
+    <p>I dati personali sono trattati esclusivamente per le seguenti finalità:</p>
+    <ul>
+      <li><strong>Gestione delle comunicazioni:</strong> ricevere, leggere e rispondere ai messaggi inviati spontaneamente tramite il modulo di contatto. La base giuridica è il legittimo interesse della titolare a gestire le comunicazioni ricevute (art. 6, par. 1, lett. f, GDPR).</li>
+      <li><strong>Funzionamento e sicurezza del sito:</strong> assicurare la corretta erogazione dei contenuti, prevenire abusi e proteggere l’infrastruttura tecnica. La base giuridica è il legittimo interesse alla sicurezza e al funzionamento del sito (art. 6, par. 1, lett. f, GDPR).</li>
+    </ul>
+    <p>Il sito ha finalità esclusivamente informative. Il modulo di contatto non costituisce uno strumento di prenotazione di appuntamenti né di richiesta o attivazione di prestazioni psicologiche professionali.</p>
+    <p>I dati raccolti attraverso il sito non sono utilizzati dalla titolare per attività di marketing, profilazione o processi decisionali automatizzati, compresa la profilazione ai sensi dell’art. 22 GDPR.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">4. Provision of data</span><span class="l-it">4. Natura del conferimento</span></span></h2>
-    <p><span class="l-en">Providing your data is optional, but without them it is not possible to reply to your message.</span><span class="l-it">Il conferimento dei dati è facoltativo, ma senza di essi non è possibile rispondere al tuo messaggio.</span></p>
+    <h2><span>4. Natura del conferimento dei dati</span></h2>
+    <p>Il conferimento dei dati tramite il modulo di contatto è volontario.</p>
+    <p>Per ricevere una risposta è necessario fornire un indirizzo e-mail valido e le informazioni indispensabili a comprendere la richiesta. In assenza di tali dati, potrebbe non essere possibile rispondere al messaggio.</p>
+    <p>La semplice navigazione del sito non richiede l’inserimento di dati identificativi.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">5. Recipients</span><span class="l-it">5. Destinatari</span></span></h2>
-    <p><span class="l-en">Your data are not disseminated. They may be processed, on behalf of the controller and only to the extent necessary, by the following providers acting as data processors: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree, Inc.</a> (USA), which receives the form and forwards it by email; the providers of the controller’s email inboxes; <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub, Inc.</a> (USA), which hosts the site; <a href="https://bunny.net/privacy/" target="_blank" rel="noopener">BunnyWay d.o.o.</a> (EU), which provides the fonts.</span><span class="l-it">I dati non sono diffusi. Possono essere trattati, per conto della titolare e solo nella misura necessaria, dai seguenti fornitori in qualità di responsabili del trattamento: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree, Inc.</a> (USA), che riceve il modulo e lo inoltra via email; i fornitori delle caselle email della titolare; <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub, Inc.</a> (USA), che ospita il sito; <a href="https://bunny.net/privacy/" target="_blank" rel="noopener">BunnyWay d.o.o.</a> (UE), che fornisce i caratteri tipografici.</span></p>
+    <h2><span>5. Cookie e tecnologie di memorizzazione locale</span></h2>
+    <p>Il sito non utilizza cookie di profilazione o pubblicitari, né strumenti di analisi statistica o tracciamento delle attività dei visitatori.</p>
+    <p>Per ricordare la lingua selezionata (italiano o inglese), viene utilizzata esclusivamente la funzione di memorizzazione locale del browser (local storage).</p>
+    <p>Questa preferenza:</p>
+    <ul>
+      <li>è utilizzata soltanto per visualizzare il sito nella lingua scelta;</li>
+      <li>rimane memorizzata nel tuo browser e non viene trasmessa alla titolare;</li>
+      <li>può essere eliminata cancellando i dati locali del sito dalle impostazioni del browser.</li>
+    </ul>
+    <p>La memorizzazione della preferenza linguistica ha finalità esclusivamente funzionali e non viene utilizzata per identificarti o monitorare la tua navigazione.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">6. Transfers outside the EU</span><span class="l-it">6. Trasferimento dei dati fuori dall’UE</span></span></h2>
-    <p><span class="l-en">Some providers are based in the United States. Any transfer takes place on the basis of the safeguards provided by Articles 44 et seq. GDPR, such as the European Commission’s Standard Contractual Clauses or the EU-U.S. Data Privacy Framework, as indicated by each provider in its own privacy policy.</span><span class="l-it">Alcuni fornitori hanno sede negli Stati Uniti. L’eventuale trasferimento avviene sulla base delle garanzie previste dagli artt. 44 e ss. GDPR, come le Clausole contrattuali standard della Commissione europea o il Data Privacy Framework UE-USA, secondo quanto indicato da ciascun fornitore nella propria informativa.</span></p>
+    <h2><span>6. Destinatari dei dati e servizi esterni</span></h2>
+    <p>I dati personali non vengono diffusi, venduti o ceduti a terzi per finalità commerciali.</p>
+    <p>Per il funzionamento del sito e la gestione delle comunicazioni sono utilizzati i seguenti servizi esterni:</p>
+    <ul>
+      <li><strong>Formspree, Inc.</strong> (Stati Uniti): gestisce l’invio dei messaggi attraverso il modulo di contatto e il loro inoltro via e-mail alla titolare.</li>
+      <li><strong>Fornitori dei servizi di posta elettronica:</strong> consentono la ricezione, la conservazione e la gestione delle comunicazioni inviate alla titolare.</li>
+      <li><strong>GitHub, Inc.</strong> (Stati Uniti): attraverso GitHub Pages fornisce il servizio di hosting del sito e può trattare dati tecnici di navigazione, compresi gli indirizzi IP, per finalità operative e di sicurezza.</li>
+      <li><strong>BunnyWay d.o.o. – Bunny Fonts</strong> (Unione europea): fornisce i caratteri tipografici utilizzati dal sito. Secondo quanto dichiarato dal fornitore, il servizio Bunny Fonts non conserva dati personali o registri delle richieste.</li>
+    </ul>
+    <p>I fornitori trattano i dati secondo il ruolo e le responsabilità loro attribuiti dalla normativa applicabile, in qualità di responsabili del trattamento o, ove pertinente, di titolari autonomi.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">7. Health and sensitive data</span><span class="l-it">7. Dati sanitari e particolari</span></span></h2>
-    <p><span class="l-en">Please do not send health information or other special categories of data (Art. 9 GDPR) through the form. Requests for professional psychology services are handled only by email, outside this site: if a professional relationship begins, you will receive a specific privacy notice.</span><span class="l-it">Ti chiedo di non inviare tramite il modulo informazioni sulla salute o altre categorie particolari di dati (art. 9 GDPR). Le richieste relative all’attività professionale da psicologa sono gestite solo via email, al di fuori di questo sito: se nascerà un rapporto professionale, riceverai un’informativa specifica.</span></p>
+    <h2><span>7. Eventuali trasferimenti di dati al di fuori dello Spazio Economico Europeo</span></h2>
+    <p>Alcuni servizi utilizzati dal sito sono forniti da società con sede negli Stati Uniti e possono comportare il trasferimento o il trattamento di dati personali al di fuori dello Spazio Economico Europeo (SEE).</p>
+    <p>Tali trasferimenti avvengono nel rispetto degli artt. 44 e seguenti del Regolamento (UE) 2016/679 (GDPR), sulla base delle garanzie previste dalla normativa europea in materia di protezione dei dati personali.</p>
+    <p>In particolare:</p>
+    <ul>
+      <li><strong>Formspree, Inc.</strong> (Stati Uniti): gestisce i dati trasmessi attraverso il modulo di contatto, inclusi nome, cognome, indirizzo e-mail e contenuto del messaggio. Il servizio utilizza infrastrutture situate negli Stati Uniti e dichiara di avvalersi delle Clausole Contrattuali Standard (Standard Contractual Clauses, SCC) approvate dalla Commissione europea, ai sensi dell’art. 46 GDPR, per garantire un adeguato livello di protezione dei dati trasferiti.</li>
+      <li><strong>GitHub, Inc.</strong> (Stati Uniti): fornisce il servizio di hosting tramite GitHub Pages e può trattare dati tecnici relativi alla navigazione, inclusi gli indirizzi IP. GitHub dichiara di aderire all’EU-US Data Privacy Framework (DPF), riconosciuto dalla Commissione europea mediante decisione di adeguatezza ai sensi dell’art. 45 GDPR. Per i trasferimenti non coperti da tale meccanismo, dichiara inoltre di ricorrere, ove applicabile, alle Clausole Contrattuali Standard della Commissione europea.</li>
+      <li><strong>Fornitori dei servizi di posta elettronica:</strong> possono trattare i dati contenuti nelle comunicazioni ricevute e inviate. Eventuali trasferimenti al di fuori del SEE dipendono dal fornitore utilizzato.</li>
+    </ul>
   </section>
   <section>
-    <h2><span><span class="l-en">8. Retention</span><span class="l-it">8. Conservazione</span></span></h2>
-    <p><span class="l-en">Messages are kept for the time needed to handle your request and in any case no longer than 12 months from the last contact, unless longer retention is required by law.</span><span class="l-it">I messaggi sono conservati per il tempo necessario a gestire la tua richiesta e comunque non oltre 12 mesi dall’ultimo contatto, salvo obblighi di legge che ne richiedano una conservazione più lunga.</span></p>
+    <h2><span>8. Dati relativi alla salute e altre categorie particolari</span></h2>
+    <p>Il modulo di contatto non è destinato alla raccolta di dati relativi alla salute, informazioni cliniche o altre categorie particolari di dati personali ai sensi dell’art. 9 GDPR.</p>
+    <p>Ti invito pertanto a non inserire nel modulo informazioni sanitarie, diagnosi, dettagli sulla tua condizione psicologica o altri dati sensibili.</p>
+    <p>Le eventuali richieste relative all’attività professionale di psicologa devono essere formulate direttamente tramite e-mail, utilizzando i recapiti indicati sul sito.</p>
+    <p>Qualora venga instaurato un rapporto professionale, il trattamento dei dati personali sarà disciplinato da una specifica informativa, distinta dalla presente e adeguata alla natura delle prestazioni erogate.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">9. Your rights</span><span class="l-it">9. I tuoi diritti</span></span></h2>
-    <p><span class="l-en">At any time you may exercise the rights set out in Articles 15–22 GDPR: access, rectification, erasure, restriction of processing, data portability and objection, by writing to the addresses above. You also have the right to lodge a complaint with the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a> (Art. 77 GDPR).</span><span class="l-it">In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR: accesso, rettifica, cancellazione, limitazione del trattamento, portabilità e opposizione, scrivendo agli indirizzi indicati sopra. Hai inoltre il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a> (art. 77 GDPR).</span></p>
+    <h2><span>9. Periodo di conservazione dei dati</span></h2>
+    <p>I dati personali contenuti nei messaggi e nelle comunicazioni successive sono conservati dalla titolare per il tempo strettamente necessario a gestire la richiesta e, in ogni caso, per un periodo non superiore a 12 mesi dall’ultima comunicazione.</p>
+    <p>Una conservazione più lunga potrà avvenire esclusivamente quando necessaria per adempiere a obblighi di legge o per l’accertamento, l’esercizio o la difesa di un diritto.</p>
+    <p>I dati tecnici trattati autonomamente dai fornitori di servizi sono conservati secondo i rispettivi criteri e termini, descritti nelle loro informative.</p>
   </section>
   <section>
-    <h2><span><span class="l-en">10. Changes</span><span class="l-it">10. Modifiche</span></span></h2>
-    <p><span class="l-en">This notice may be updated. The date of the latest version is shown at the top of this page.</span><span class="l-it">La presente informativa può essere aggiornata. La data dell’ultima versione è indicata in cima alla pagina.</span></p>
+    <h2><span>10. Diritti dell’interessato</span></h2>
+    <p>In conformità agli artt. 15-22 del GDPR, nei casi e nei limiti previsti dalla normativa, hai il diritto di:</p>
+    <ul>
+      <li><strong>Accesso:</strong> ottenere informazioni sui dati personali che ti riguardano e riceverne una copia.</li>
+      <li><strong>Rettifica:</strong> richiedere la correzione di dati inesatti o l’integrazione di quelli incompleti.</li>
+      <li><strong>Cancellazione:</strong> richiedere l’eliminazione dei tuoi dati personali quando ricorrono le condizioni previste dalla legge.</li>
+      <li><strong>Limitazione:</strong> richiedere che il trattamento dei dati sia limitato in determinate circostanze.</li>
+      <li><strong>Portabilità:</strong> ricevere i tuoi dati in un formato strutturato e leggibile da dispositivo automatico, nei casi in cui tale diritto sia applicabile.</li>
+      <li><strong>Opposizione:</strong> opporti, per motivi connessi alla tua situazione particolare, ai trattamenti fondati sul legittimo interesse.</li>
+    </ul>
+    <p>Per esercitare questi diritti puoi scrivere a uno degli indirizzi e-mail indicati nella sezione 1 “Titolare del trattamento”.</p>
+    <p>Le richieste saranno gestite nei termini previsti dal GDPR, di norma entro un mese dal ricevimento.</p>
+    <p>Hai inoltre il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>, ai sensi dell’art. 77 GDPR, qualora ritenga che il trattamento dei tuoi dati personali violi la normativa applicabile.</p>
   </section>
+  <section>
+    <h2><span>11. Aggiornamenti dell’informativa</span></h2>
+    <p>La presente informativa può essere modificata per riflettere eventuali aggiornamenti normativi o cambiamenti nelle modalità di funzionamento del sito e nei servizi utilizzati.</p>
+    <p>La versione aggiornata sarà sempre disponibile su questa pagina, con indicazione della data dell’ultima modifica.</p>
+  </section>
+  </div>
+  <div class="l-en">
+  <section>
+    <h2><span>1. Data controller</span></h2>
+    <p>The controller of personal data is Chiara Catalano.</p>
+    <p>For any request concerning the protection of your personal data you can write to:</p>
+    <ul>
+      <li><a class="em" href="#" data-u="1onalatac.araihc" data-d="ti.aivapssui">chiara.catalano1 [at] iusspavia [dot] it</a></li>
+      <li><a class="em" href="#" data-u="pols.onalatac.araihc" data-d="moc.liamg">chiara.catalano.slop [at] gmail [dot] com</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2><span>2. What data are processed</span></h2>
+    <p>When you use the site, the following categories of personal data may be processed:</p>
+    <h3>Data provided through the contact form</h3>
+    <p>When you fill in the contact form, your first name, last name, email address and the content of your message are collected. This information is used solely to handle your request and reply to you.</p>
+    <h3>Technical browsing data</h3>
+    <p>The hosting service may automatically collect some technical information needed for the site to work and stay secure, including IP address, browser type, date and time of access and any information about requests made to the server.</p>
+    <p>These data are handled according to the methods and retention periods set by the service provider.</p>
+  </section>
+  <section>
+    <h2><span>3. Purposes and legal bases</span></h2>
+    <p>Personal data are processed solely for the following purposes:</p>
+    <ul>
+      <li><strong>Handling communications:</strong> receiving, reading and replying to messages sent voluntarily through the contact form. The legal basis is the controller’s legitimate interest in handling the communications received (Art. 6(1)(f) GDPR).</li>
+      <li><strong>Operation and security of the site:</strong> ensuring that content is delivered correctly, preventing abuse and protecting the technical infrastructure. The legal basis is the legitimate interest in the security and operation of the site (Art. 6(1)(f) GDPR).</li>
+    </ul>
+    <p>The site is for information purposes only. The contact form is not a tool for booking appointments or for requesting or starting professional psychological services.</p>
+    <p>Data collected through the site are not used by the controller for marketing, profiling or automated decision-making, including profiling under Art. 22 GDPR.</p>
+  </section>
+  <section>
+    <h2><span>4. Provision of data</span></h2>
+    <p>Providing data through the contact form is voluntary.</p>
+    <p>To receive a reply you need to provide a valid email address and the information needed to understand your request. Without these data it may not be possible to reply to your message.</p>
+    <p>Simply browsing the site does not require you to enter any identifying data.</p>
+  </section>
+  <section>
+    <h2><span>5. Cookies and local storage</span></h2>
+    <p>The site does not use profiling or advertising cookies, nor analytics or tracking tools.</p>
+    <p>To remember the selected language (Italian or English), only the browser’s local storage function is used.</p>
+    <p>This preference:</p>
+    <ul>
+      <li>is used only to display the site in the chosen language;</li>
+      <li>stays stored in your browser and is not sent to the controller;</li>
+      <li>can be deleted by clearing the site’s local data in your browser settings.</li>
+    </ul>
+    <p>Storing the language preference serves purely functional purposes and is not used to identify you or monitor your browsing.</p>
+  </section>
+  <section>
+    <h2><span>6. Recipients and external services</span></h2>
+    <p>Personal data are not disclosed, sold or transferred to third parties for commercial purposes.</p>
+    <p>The following external services are used to run the site and handle communications:</p>
+    <ul>
+      <li><strong>Formspree, Inc.</strong> (United States): handles the sending of messages through the contact form and forwards them by email to the controller.</li>
+      <li><strong>Email service providers:</strong> enable the receipt, storage and management of communications sent to the controller.</li>
+      <li><strong>GitHub, Inc.</strong> (United States): through GitHub Pages provides the hosting service for the site and may process technical browsing data, including IP addresses, for operational and security purposes.</li>
+      <li><strong>BunnyWay d.o.o. – Bunny Fonts</strong> (European Union): provides the fonts used on the site. According to the provider, Bunny Fonts does not store personal data or request logs.</li>
+    </ul>
+    <p>Providers process data according to the role and responsibilities assigned to them by applicable law, as data processors or, where relevant, as independent controllers.</p>
+  </section>
+  <section>
+    <h2><span>7. Transfers outside the European Economic Area</span></h2>
+    <p>Some services used by the site are provided by companies based in the United States and may involve the transfer or processing of personal data outside the European Economic Area (EEA).</p>
+    <p>Such transfers take place in compliance with Articles 44 et seq. of Regulation (EU) 2016/679 (GDPR), on the basis of the safeguards provided by EU data protection law.</p>
+    <p>In particular:</p>
+    <ul>
+      <li><strong>Formspree, Inc.</strong> (United States): handles the data sent through the contact form, including first name, last name, email address and message content. The service uses infrastructure located in the United States and states that it relies on the Standard Contractual Clauses (SCCs) approved by the European Commission under Art. 46 GDPR to ensure an adequate level of protection for transferred data.</li>
+      <li><strong>GitHub, Inc.</strong> (United States): provides hosting through GitHub Pages and may process technical browsing data, including IP addresses. GitHub states that it participates in the EU-US Data Privacy Framework (DPF), recognised by the European Commission through an adequacy decision under Art. 45 GDPR. For transfers not covered by this mechanism, it also states that it relies, where applicable, on the European Commission’s Standard Contractual Clauses.</li>
+      <li><strong>Email service providers:</strong> may process the data contained in communications received and sent. Any transfers outside the EEA depend on the provider used.</li>
+    </ul>
+  </section>
+  <section>
+    <h2><span>8. Health data and other special categories</span></h2>
+    <p>The contact form is not intended for collecting health data, clinical information or other special categories of personal data under Art. 9 GDPR.</p>
+    <p>Please do not enter health information, diagnoses, details about your psychological condition or other sensitive data in the form.</p>
+    <p>Any requests relating to professional psychology services should be made directly by email, using the contact details provided on the site.</p>
+    <p>If a professional relationship is established, the processing of personal data will be governed by a specific privacy notice, separate from this one and appropriate to the nature of the services provided.</p>
+  </section>
+  <section>
+    <h2><span>9. Retention period</span></h2>
+    <p>Personal data contained in messages and in subsequent communications are kept by the controller only for as long as strictly necessary to handle the request and, in any case, for no longer than 12 months from the last communication.</p>
+    <p>Longer retention may occur only where necessary to comply with legal obligations or to establish, exercise or defend legal claims.</p>
+    <p>Technical data processed independently by service providers are retained according to their own criteria and terms, as described in their privacy policies.</p>
+  </section>
+  <section>
+    <h2><span>10. Your rights</span></h2>
+    <p>In accordance with Articles 15–22 GDPR, in the cases and within the limits provided by law, you have the right to:</p>
+    <ul>
+      <li><strong>Access:</strong> obtain information about the personal data concerning you and receive a copy.</li>
+      <li><strong>Rectification:</strong> request the correction of inaccurate data or the completion of incomplete data.</li>
+      <li><strong>Erasure:</strong> request the deletion of your personal data where the legal conditions are met.</li>
+      <li><strong>Restriction:</strong> request that processing be restricted in certain circumstances.</li>
+      <li><strong>Portability:</strong> receive your data in a structured, machine-readable format, where this right applies.</li>
+      <li><strong>Objection:</strong> object, on grounds relating to your particular situation, to processing based on legitimate interest.</li>
+    </ul>
+    <p>To exercise these rights, write to one of the email addresses listed in section 1 “Data controller”.</p>
+    <p>Requests will be handled within the time limits set by the GDPR, normally within one month of receipt.</p>
+    <p>You also have the right to lodge a complaint with the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Italian Data Protection Authority (Garante per la protezione dei dati personali)</a> under Art. 77 GDPR if you believe that the processing of your personal data infringes applicable law.</p>
+  </section>
+  <section>
+    <h2><span>11. Updates to this notice</span></h2>
+    <p>This notice may be amended to reflect regulatory updates or changes in how the site works and in the services used.</p>
+    <p>The updated version will always be available on this page, with the date of the latest change.</p>
+  </section>
+  </div>
   <footer>© 2026 Chiara Catalano</footer>
 </div>
 <script>

@@ -158,6 +158,11 @@
   .contactform input, .contactform textarea { border-color: #9c8a7d; }
   .contactform .invalid { border: 2px solid #b3261e; }
   .formstatus.err::before { content: "⚠ "; } .formstatus.ok::before { content: "✓ "; }
+  /* --- testo un po' più piccolo da computer --- */
+  @media (min-width: 801px) {
+    body { font-size: 16.5px; }
+    .entry p, .pubs, .books .author { font-size: 15px; }
+  }
 </style>
 <style>
   .single { max-width: 760px; margin: 0 auto; padding: 64px 32px; }
